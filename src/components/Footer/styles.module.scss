@@ -1,0 +1,27 @@
+@import '../../styles//utils/mixins.scss';
+
+.footerContainer {
+    background-color: var(--color-800);
+    border-top: 2px solid var(--color-700);
+    color: #5F5F6F;
+    width: 100%;
+    padding: 2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+
+        a {
+            color: #5F5F6F;
+            font-size: 22px;
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+}

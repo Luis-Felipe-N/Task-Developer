@@ -1,0 +1,11 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin f-alC-g($g) {
+    display: flex;
+    align-items: center;
+    gap: $g;
+}

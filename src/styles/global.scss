@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+:root {
+        --white: #fff;
+        --color-200: #5F5F6E;
+        --color-500: #282B31;
+        --color-650: #2D2D3A;
+        --color-700: #262631;
+        --color-800: #1C1C24;
+        --color-900: #131419;
+
+
+        --primary: #4447E2;
+}
+
+body {
+    background-color: var(--color-900);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+}
+
+
+// Estilos padrões
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    transition: .2s;
+
+    &:hover {
+        filter: brightness(.8);
+    }
+
+}
