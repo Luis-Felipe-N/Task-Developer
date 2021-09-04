@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { BsGrid1X2Fill, BsBoxArrowRight } from 'react-icons/bs'
+import { BsGrid1X2Fill, BsBoxArrowRight, BsQuestionCircleFill } from 'react-icons/bs'
 import { FaGlobeAmericas, FaCoins, FaUser, FaSun } from 'react-icons/fa'
 import { IoHelpCircle } from 'react-icons/io5'
 import { IoIosArrowDown } from 'react-icons/io'
@@ -50,7 +50,7 @@ export function Header() {
                         <li>
                             <Link href="/">
                                 <a>
-                                    <IoHelpCircle size="22px" />
+                                    <BsQuestionCircleFill size="22px" />
                                     <span>Help</span>
                                 </a>
                             </Link>
