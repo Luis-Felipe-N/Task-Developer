@@ -3,6 +3,7 @@ import { Footer } from '../components/Footer'
 import '../styles/global.scss'
 
 function MyApp({ Component, pageProps }) {
+
   return (
     <>
       <Header />
@@ -13,3 +14,5 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+
+// 549180

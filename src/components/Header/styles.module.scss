@@ -79,7 +79,7 @@
                 }
             }
 
-            .menu {
+            .btnMenu {
                 @include f-alC-g(.3rem);
 
                 img {
@@ -89,6 +89,7 @@
             }
 
             .menuDrop.active {
+
                 display: flex;
                 animation: fromUp .2s;
             }
@@ -105,6 +106,7 @@
 
                 position: absolute;
                 top: 3.2rem;
+                z-index: 10;
 
                 // display: flex;
                 flex-direction: column;
@@ -143,6 +145,47 @@
         }
     }
 }
+
+
+@media (max-width: 750px) {
+    .headerContainer {
+        .header {
+            .menu {
+                border-top: 2px solid var(--color-700);
+                background-color: var(--color-800);
+
+                width: 100%;
+                height: 5.5rem;
+
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                z-index: 10;
+
+                @include center;
+
+                ul {
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 0 5%;
+
+                    a {
+                        flex-direction: column;
+                        // font-size: 1.5rem;
+
+                        
+                    }
+
+                    a svg {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 @keyframes fromUp {
     to {

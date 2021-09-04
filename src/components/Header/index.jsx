@@ -34,7 +34,8 @@ export function Header() {
                         <li>
                             <Link  href="/">
                                 <a className={styles.active}>
-                                    <BsGrid1X2Fill  />Task list
+                                    <BsGrid1X2Fill  />
+                                    <span>Task list</span>
                                 </a>
                             </Link>
                         </li>
@@ -42,7 +43,7 @@ export function Header() {
                             <Link href="/">
                                 <a>
                                     <FaGlobeAmericas />
-                                    News
+                                    <span>News</span>
                                 </a>
                             </Link>
                         </li>
@@ -50,7 +51,7 @@ export function Header() {
                             <Link href="/">
                                 <a>
                                     <IoHelpCircle size="22px" />
-                                    Help
+                                    <span>Help</span>
                                 </a>
                             </Link>
                         </li>
@@ -69,7 +70,7 @@ export function Header() {
                     </div>
                     <button 
                         aria-label="Botão de menu" 
-                        className={styles.menu}
+                        className={styles.btnMenu}
                         onClick={() => setOpenMenu(!openMenu)}
                     >
                         <Image src="/avatar.svg" width={35} height={35} alt="Avatar" />
