@@ -9,3 +9,18 @@
     align-items: center;
     gap: $g;
 }
+
+@mixin btnPrimary {
+    // width: 100%;
+        height: 3rem;
+        border-radius: 15px;
+        border: 2px solid var(--primary);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--white);
+
+        &:hover {
+            background-color: var(--primary);
+            filter: brightness(1);
+        }
+}

@@ -7,9 +7,10 @@ import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 export default function Createtask() {
     return (
         <main className={styles.createtaskContainer}>
-            <p>Task Creation</p>
+            <h2>Task Creation</h2>
             <form>
-                <p>Selecione uma rede social</p>
+                <section>
+                <h4>Selecione uma rede social</h4>
                 <div className={styles.container}>
                     <div className={styles.item}>
                         <div className={styles.linkedin}>
@@ -30,8 +31,10 @@ export default function Createtask() {
                         <input type="checkbox" name="socialMedia" id="socialMedia" />
                     </div>
                 </div>
+                </section>
 
-                <p>Tipo da tarefa</p>
+                <section>
+                <h4>Tipo da tarefa</h4>
                 <div className={styles.container}>
                     <div className={styles.item}>
                         <div>
@@ -70,6 +73,19 @@ export default function Createtask() {
                         <input type="checkbox" name="socialMedia" id="socialMedia" />
                     </div>
                 </div>
+                </section>
+
+                <section>
+                    <h4>Link do projeto</h4>
+                    <p>For example: https://dribbble.com/shots/Example-Name</p>
+                    <div className={styles.container}>
+                        <input type="text" />
+                    </div>
+                </section>
+
+                <button className={styles.btnCreateTask} type="submit">
+                    Criar Tarefa
+                </button>
             </form>
         </main>
     )

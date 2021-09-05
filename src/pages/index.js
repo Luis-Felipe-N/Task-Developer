@@ -15,12 +15,12 @@ export default function Home() {
         </Head>
         <main className={styles.homeContainer}>
             <section className={styles.tasks}>
-                <h3>Task list</h3>
+                <h3>Lista de tarefas</h3>
 
                 <button 
                     onClick={() => Router.push('/createtask')}
                 >
-                    + Create Task
+                    + Criar Tarefa
                 </button>
             </section>
 

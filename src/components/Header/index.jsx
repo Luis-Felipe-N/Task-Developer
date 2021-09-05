@@ -1,10 +1,10 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import Router from 'next/router'
 
 import { BsGrid1X2Fill, BsBoxArrowRight, BsQuestionCircleFill } from 'react-icons/bs'
 import { FaGlobeAmericas, FaCoins, FaUser, FaSun } from 'react-icons/fa'
-import { IoHelpCircle } from 'react-icons/io5'
 import { IoIosArrowDown } from 'react-icons/io'
 
 import styles from './styles.module.scss'
@@ -12,6 +12,7 @@ import { useState } from 'react'
 
 export function Header() {
     const [ openMenu , setOpenMenu ] = useState(false)
+    console.log(Router.asPath)
 
     return (
         <header className={styles.headerContainer}>
@@ -35,7 +36,7 @@ export function Header() {
                     <ul>
                         <li>
                             <Link  href="/">
-                                <a className={styles.active}>
+                                <a className={Router.asPath === '/' && styles.active}>
                                     <BsGrid1X2Fill  />
                                     <span>Task list</span>
                                 </a>
@@ -43,7 +44,7 @@ export function Header() {
                         </li>
                         <li>
                             <Link href="/news">
-                                <a>
+                                <a className={Router.asPath === '/news' && styles.active}>
                                     <FaGlobeAmericas />
                                     <span>News</span>
                                 </a>
