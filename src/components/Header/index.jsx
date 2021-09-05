@@ -16,19 +16,21 @@ export function Header() {
     return (
         <header className={styles.headerContainer}>
             <div className={styles.header}>
-                <div className={styles.logo}>
-                    <div className={styles.img_logo}>
-                        <Image 
-                            src="/logo.svg"
-                            alt="Logo task Desing"
-                            width={20}
-                            height={20}
-                        />
+                <Link href="/">
+                    <div className={styles.logo}>
+                        <div className={styles.img_logo}>
+                            <Image 
+                                src="/logo.svg"
+                                alt="Logo task Desing"
+                                width={20}
+                                height={20}
+                            />
+                        </div>
+                        <h1>
+                            Pro-Promotion.com
+                        </h1>
                     </div>
-                    <h1>
-                        Pro-Promotion.com
-                    </h1>
-                </div>
+                </Link>
                 <nav className={styles.menu}>
                     <ul>
                         <li>
@@ -40,7 +42,7 @@ export function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="/news">
                                 <a>
                                     <FaGlobeAmericas />
                                     <span>News</span>

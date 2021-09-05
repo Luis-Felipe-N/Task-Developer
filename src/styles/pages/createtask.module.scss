@@ -1,0 +1,81 @@
+@import '../utils/mixins.scss';
+
+.createtaskContainer {
+    padding: 2rem 5%;
+    margin:0 auto;
+
+    form {
+        margin: 2rem 0;
+        p {
+            margin-bottom: .5rem;
+            color: #5F5F6E;
+        }
+
+        > div {
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            
+            .item {
+                border-radius: 15px;
+                background-color: var(--color-800);
+
+                padding: .5rem;
+                width: 100%;
+                max-width: 250px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                div {
+                    display: flex;
+                    align-items: center;
+
+                    div{
+                        @include center;
+                        border-radius: 10px;
+                        width: 35px;
+                        height: 35px;
+                        margin-right: 1rem;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    
+                }
+                .linkedin {
+                    div {
+                        background-color: #0966C2;
+                    }
+                }
+
+                .instagram {
+                    div {
+                        background-color: #CA538D;
+                        background: linear-gradient(to left bottom , #CA538D, #ca538db7 ,#F79C4B);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+.createtaskContainer {
+    form {
+        .container {
+            .item {
+                max-width: 100% !important;
+            }
+        }
+    }
+}
+}
