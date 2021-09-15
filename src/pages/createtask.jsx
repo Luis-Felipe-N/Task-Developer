@@ -79,7 +79,7 @@ export default function Createtask() {
                     <h4>Link do projeto</h4>
                     <p>For example: https://dribbble.com/shots/Example-Name</p>
                     <div className={styles.container}>
-                        <input type="text" />
+                        <input type="text" placeholder="https://dribbble.com/shots/13967318-Dribbble-Promotion-Service-UI-Components"/>
                     </div>
                 </section>
 

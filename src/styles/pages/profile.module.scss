@@ -1,0 +1,161 @@
+@import '../utils/mixins.scss';
+
+.profileContainer {
+    padding: 2rem 5%;
+    margin:0 auto;
+    width: 100%;
+
+    h4 {
+        font-size: 1rem;
+        color: var(--color-200);
+        margin-bottom: .5rem;
+    }
+
+    .sections {
+        margin-top: 2rem;       
+        width: 100%;
+    
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 2rem;
+
+        &__password {
+            margin-top: 3rem;
+        }
+
+        form {
+            button {
+                @include btnPrimary;
+                padding: 0 1rem;
+            }
+        }
+        section, > form {
+            flex: 1;
+        }
+    }
+
+    .cardAvatar {
+        background-color: var(--color-800);
+        padding: 1rem;
+        border-radius: 10px;
+        max-width: 250px;
+
+        button {
+            margin-top: 1rem;
+            width: 100%;
+            border: 2px solid var(--color-650);
+            color: var(--white);
+            padding: .9rem 1.2rem;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+    
+    .form__socialMedia {
+        margin-top: 2rem;
+        .item {
+            border-radius: 15px;
+            background-color: var(--color-800);
+
+            padding: .5rem;
+            width: 100%;
+            max-width: 250px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div {
+                display: flex;
+                align-items: center;
+
+                div{
+                    @include center;
+                    border-radius: 10px;
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 1rem;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                
+            }
+
+        }
+    }
+    .itemStatistc {
+        
+        width: 100%;
+        
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        
+        > div {
+            width: 100%;
+            padding: .5rem;
+            border-radius: 15px;
+            background-color: var(--color-800);
+            display: flex;
+            align-items: center;
+
+            .img {
+
+                @include center;
+                width: 50px;
+                height: 50px;
+                margin-right: 1rem;
+                border-radius: 10px;
+
+                img {
+                    overflow: hidden;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            
+            .text {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    &:first-child{
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                    }
+
+                    &:last-child {
+                        color: var(--color-200);
+                    }
+                }
+            }
+            
+        }
+    }
+
+    
+}
+
+@media (max-width: 900px) {
+    .profileContainer {
+        .sections {
+            width: 100%;
+            flex-direction: column;
+
+            section, form {
+                width: 100%;
+            }
+        }
+    }
+}

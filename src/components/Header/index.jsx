@@ -1,7 +1,8 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import Router from 'next/router'
+// import 
+// import  from 'next/router'
 
 import { BsGrid1X2Fill, BsBoxArrowRight, BsQuestionCircleFill } from 'react-icons/bs'
 import { FaGlobeAmericas, FaCoins, FaUser, FaSun } from 'react-icons/fa'
@@ -9,10 +10,11 @@ import { IoIosArrowDown } from 'react-icons/io'
 
 import styles from './styles.module.scss'
 import { useState } from 'react'
+import { useRouter } from 'next/dist/client/router'
 
 export function Header() {
     const [ openMenu , setOpenMenu ] = useState(false)
-    console.log(Router.asPath)
+    const router = useRouter()
 
     return (
         <header className={styles.headerContainer}>
@@ -36,7 +38,7 @@ export function Header() {
                     <ul>
                         <li>
                             <Link  href="/">
-                                <a className={Router.asPath === '/' && styles.active}>
+                                <a className={router.asPath === '/' && styles.active}>
                                     <BsGrid1X2Fill  />
                                     <span>Task list</span>
                                 </a>
@@ -44,7 +46,7 @@ export function Header() {
                         </li>
                         <li>
                             <Link href="/news">
-                                <a className={Router.asPath === '/news' && styles.active}>
+                                <a className={router.asPath === '/news' && styles.active}>
                                     <FaGlobeAmericas />
                                     <span>News</span>
                                 </a>
@@ -81,7 +83,7 @@ export function Header() {
                     </button>
                     <div className={openMenu ? `${styles.menuDrop} ${styles.active}` : styles.menuDrop}>
                         <nav>
-                            <Link href="/">
+                            <Link href="/user/1232">
                                 <a>
                                     <FaUser />    My Profile
                                 </a>
