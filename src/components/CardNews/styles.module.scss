@@ -1,0 +1,18 @@
+.cardContainer {
+    padding: 1rem ;
+    background-color: var(--color-800);
+    max-width: 350px;
+    border-radius: 10px;
+
+    .content {
+        margin: .7rem 0;
+
+        span {
+            display: block;
+            font-size: .8rem;
+            color: #A6ADB1;
+            margin-top: .7rem;
+        }
+
+    }
+}

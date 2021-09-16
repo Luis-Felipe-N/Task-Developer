@@ -1,9 +1,15 @@
+import Head from 'next/head'
+
 import Input from '../../components/Input'
 import styles from '../../styles/pages/profile.module.scss'
 
 export default function User() {
     
     return (
+        <>
+        <Head>
+            <title>User</title>
+        </Head>
         <main className={styles.profileContainer}>
             <h3>Profile</h3>
             <div className={styles.sections}>
@@ -78,5 +84,6 @@ export default function User() {
                 </section>
             </div>
         </main>
+        </>
     )
 }

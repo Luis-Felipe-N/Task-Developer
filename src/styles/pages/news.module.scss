@@ -1,0 +1,46 @@
+.newsContainer {
+    padding: 2rem 5%;
+
+    > section {
+        margin: 2rem 0;
+
+        &:last-child {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+    }
+    .newView {
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: var(--color-800);
+        display: flex;
+        align-items: center;
+
+        .content {
+            padding:  1rem 2rem;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                margin: 1rem 0;
+            }
+
+            span {
+                font-size: .8rem;
+                color: #A6ADB1;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .newsContainer {
+        .newView {
+            flex-direction: column;
+        }
+    }
+}
